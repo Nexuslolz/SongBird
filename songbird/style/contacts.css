@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Bellota";
+  src: url(../assets/fonts/Bellota_Text/BellotaText-Regular.ttf);
+}
+@font-face {
+  font-family: "Amatic";
+  src: url(../assets/fonts/Amatic_SC/AmaticSC-Bold.ttf);
+}
+.contacts-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.contacts-list__item {
+  list-style: none;
+  margin-right: 40%;
+}
+
+.contact-list__img {
+  width: 1.8vw;
+  transition: 0.15s;
+}
+
+.contacts-list__link:hover .contact-list__img {
+  transform: scale(1.15);
+  transition: 0.15s;
+}

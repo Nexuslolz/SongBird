@@ -1,0 +1,102 @@
+@import 'variables.scss';
+
+.answer{
+    display: flex;
+    flex-direction: row;
+    // flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2%;
+    @extend %text-font;
+    margin-bottom: 10%;
+    
+}
+.answer-info{
+    padding: 15px;
+    width: 75%;
+    height:88%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    max-width: 1365px;
+    background-color: $color-window;
+    color: white;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px 5px $color-window;
+    gap: 3%;
+}
+.answer-info__description{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.answer-info__text{
+    margin-bottom: 14%;
+    font-size: 20px;
+}
+.answer-info__content{
+    @extend %header-font;
+    font-size: 42px;
+}
+.answer-info__content-latin{
+    font-size: 20px;
+    margin-bottom: 5%;
+}
+.answer-info__img{
+    display: none;
+    max-width: 300px;
+    max-height: 200px;
+    width: 300px;
+}
+.answer-info__img_active{
+    display: block;
+}
+.answer-info__audio{
+    display: none;
+}
+.answer-info__audio_active{
+    display: flex;
+}
+
+.answer-btn-next{
+ border:none;
+ @extend %header-font;
+ font-size: 36px;
+ color: #222;
+ text-decoration: none;
+ padding: 1px 18px;
+ backdrop-filter: blur(5px);
+ transition: 0.15s;
+ border-radius: 5px;
+ position: relative;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-color: rgba(255, 255, 255, 0.7);
+     &:hover{
+         box-shadow: 0 0 2px 1px rgba(255, 255, 255);
+         background-color: rgba(255, 255, 255);
+         transition: 0.15s;
+         cursor: pointer;
+     }
+     &:active{
+        background-color: rgba(255, 255, 255, 0.9);
+
+     }
+ z-index: 10; 
+ margin-bottom: 5%; 
+}
+.answer-btn-next_disabled{
+    background-color: rgba(255, 255, 255, 0.5);
+    &:hover{
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: none;
+        cursor: not-allowed;
+    }
+    &:active{
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+}

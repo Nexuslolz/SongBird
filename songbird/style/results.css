@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "Bellota";
+  src: url(../assets/fonts/Bellota_Text/BellotaText-Regular.ttf);
+}
+@font-face {
+  font-family: "Amatic";
+  src: url(../assets/fonts/Amatic_SC/AmaticSC-Bold.ttf);
+}
+.page-content_lose,
+.page-content_win {
+  font-family: "Amatic", sans-serif;
+}
+
+.page-content_lose,
+.page-content_win {
+  font-size: 54px;
+  text-align: center;
+}
+
+.page-content_lose-link {
+  text-decoration: none;
+  color: rgba(0, 47, 35, 0.7);
+}
+.page-content_lose-link:hover {
+  text-decoration: underline;
+  color: #222;
+}
+
+.page-content_lose,
+.page-content_win {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.page-content_lose_active,
+.page-content_win_active {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.quiz-wrapper {
+  display: flex;
+  flex-direction: column;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.quiz-wrapper_hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}

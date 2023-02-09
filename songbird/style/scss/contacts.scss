@@ -1,0 +1,26 @@
+@import 'variables.scss';
+
+.contacts-list{
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.contacts-list__item{
+    list-style: none;
+    margin-right: 40%;
+}
+
+.contact-list__img{
+    width: 1.8vw;
+    transition: 0.15s;
+}
+
+.contacts-list__link{
+        &:hover{
+        .contact-list__img{
+            transform: scale(1.15);
+            transition: 0.15s;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@import 'variables.scss';
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 30%;
+}
+
+.nav-list__item{
+    transition: 0.15s;
+        &:hover{
+        transform: scale(1.1) rotate(5deg);
+        transition: 0.15s;
+    }
+}
+.nav-list__link{
+    color: white;
+    text-decoration: none;
+    @extend %header-font;
+    font-size: 2.3vw;
+    transition: 0.15s;
+    &:hover{
+        text-shadow: 0 0 15px white;
+        transition: 0.15s;
+    }
+}

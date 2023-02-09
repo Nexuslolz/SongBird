@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Bellota";
+  src: url(../assets/fonts/Bellota_Text/BellotaText-Regular.ttf);
+}
+@font-face {
+  font-family: "Amatic";
+  src: url(../assets/fonts/Amatic_SC/AmaticSC-Bold.ttf);
+}
+.page-logo {
+  margin-right: 3.5%;
+}
+
+.page-logo__img {
+  max-width: 70px;
+}

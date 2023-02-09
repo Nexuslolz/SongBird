@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/img/favicon.ico" />
+    <link rel="stylesheet" href="./style/global.css" />
+    <link rel="stylesheet" href="./style/nav.css" />
+    <link rel="stylesheet" href="./style/logo.css" />
+    <link rel="stylesheet" href="./style/contacts.css" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/question.css" />
+    <link rel="stylesheet" href="./style/answer.css" />
+    <link rel="stylesheet" href="./style/results.css" />
+    <link rel="stylesheet" href="./style/breakpoints.css" />
+    <title>Викторина - Song Bird</title>
+  </head>
+  <body class="page__body">
+    <header class="page-header">
+      <div class="page-logo">
+        <a href="./index.html" class="page-logo__link"
+          ><img src="./assets/img/logo.svg" alt="logo" class="page-logo__img"
+        /></a>
+      </div>
+      <nav class="page-nav">
+        <ul class="nav-list">
+          <li class="nav-list__item">
+            <a href="./index.html" class="nav-list__link">Главная</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="./quiz.html" class="nav-list__link">Викторина</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-main">
+      <div class="quiz-wrapper">
+        <section class="question">
+          <div class="question-score">
+            Score: <span class="all-score">0</span>
+          </div>
+          <ul class="question-list">
+            <li class="question-list__item question-list__item_active">
+              Разминка
+            </li>
+            <li class="question-list__item">Воробьиные</li>
+            <li class="question-list__item">Лесные птицы</li>
+            <li class="question-list__item">Певчие птицы</li>
+            <li class="question-list__item">Хищные птицы</li>
+            <li class="question-list__item">Морские птицы</li>
+          </ul>
+          <div class="question-current">
+            <div class="question-current__wrapper">
+              <img
+                src="./assets/img/bird.jpg"
+                alt="bird"
+                class="question-current__img"
+              />
+            </div>
+            <div class="question-current__content">
+              <h3 class="question-current__header">**********</h3>
+              <div class="quetion-current__audio audio">
+                <div class="audio-control audio-control-play"></div>
+                <div class="audio-scale__wrapper">
+                  <div class="audio-current-time">00:00</div>
+                  <div class="audio-scale">
+                    <div class="audio-range"></div>
+                  </div>
+                  <div class="audio-full-time">00:00</div>
+                </div>
+                <div class="audio-control audio-control-volume"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="answer">
+          <ul class="answer-list">
+            <li class="answer-list__item"></li>
+            <li class="answer-list__item"></li>
+            <li class="answer-list__item"></li>
+            <li class="answer-list__item"></li>
+            <li class="answer-list__item"></li>
+            <li class="answer-list__item"></li>
+            <div class="answer-current__next">
+              <a class="answer-btn-next answer-btn-next_disabled"> Далее </a>
+            </div>
+          </ul>
+          <div class="answer-info">
+            <div class="answer-info__header">
+              <div class="answer-info__content">
+                Послушайте плеер.<br />
+                Выберите птицу из списка
+              </div>
+              <div class="answer-info__content-latin"></div>
+              <div class="answer-info__wrapper">
+                <img
+                  src="./assets/img/bird.jpg"
+                  alt="answer img"
+                  class="answer-info__img"
+                />
+              </div>
+            </div>
+            <div class="answer-info__description">
+              <div class="answer-info__text"></div>
+              <div class="answer-info__audio audio">
+                <div class="audio-control audio-control-play"></div>
+                <div class="audio-scale__wrapper">
+                  <div class="audio-current-time">00:00</div>
+                  <div class="audio-scale">
+                    <div class="audio-range"></div>
+                  </div>
+                  <div class="audio-full-time">00:00</div>
+                </div>
+                <div class="audio-control audio-control-volume"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="page-content page-content_win">
+        Поздравляем вас с успешным прохождением викторины!
+      </div>
+      <div class="page-content page-content_lose">
+        Вы набрали <span class="result-score"></span> баллов из 30 возможных.
+        Можете попробовать
+        <a href="./quiz.html" class="page-content_lose-link">снова</a>!
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="contacts">
+        <ul class="contacts-list">
+          <li class="contacts-list__item">
+            <a
+              href="https://github.com/Nexuslolz"
+              class="contacts-list__link"
+              target="_blank"
+            >
+              <img
+                src="./assets/img/GitHub.svg"
+                alt="my github"
+                class="contact-list__img"
+                width="50"
+                height="50"
+              />
+            </a>
+          </li>
+          <li class="contacts-list__item">
+            <a
+              href="https://rs.school/js/"
+              class="contacts-list__link"
+              target="_blank"
+            >
+              <img
+                src="./assets/img/rs_school_js-logo.svg"
+                alt="rsschool"
+                class="contact-list__img"
+                id="rsschool"
+                width="50"
+                height="50"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__contacts">
+        <div class="page-footer__text">© 2022</div>
+      </div>
+    </footer>
+    <script src="./src/birds.js" type="module"></script>
+    <script src="./src/mix-bird.js" type="module"></script>
+    <script src="./src/index.js"></script>
+  </body>
+</html>

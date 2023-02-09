@@ -1,0 +1,43 @@
+@import 'variables.scss';
+
+.page-content_lose-link{
+    text-decoration: none;
+    color: $color-window;
+    &:hover{
+        text-decoration: underline;
+        color: #222;
+    }
+}
+
+.page-content_lose,
+.page-content_win{
+    @extend %result;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+.page-content_lose_active,
+.page-content_win_active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.quiz-wrapper{
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.quiz-wrapper_hidden{
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}

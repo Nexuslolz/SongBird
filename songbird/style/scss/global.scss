@@ -1,0 +1,90 @@
+@import 'variables.scss';
+
+@keyframes start {
+    0%{
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+}
+.page{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    @extend %text-font;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-page{
+    overflow: hidden;
+}
+// .page-video{
+//     width: 100%;
+//     overflow: hidden;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     z-index: -1;
+//     opacity: 0.4;
+// }
+
+.page__body{
+    animation: start 2s ease-in-out;
+    transition: 0.3s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+    opacity: 0;
+    max-width: $desktop-width;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    overflow-x: hidden;
+    justify-content: space-between;
+}
+
+.page-header,
+.page-footer{
+    @extend %desktop-width;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    margin: 0 auto;
+    padding: 1% 5% 0 5%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(16, 79, 71, 0.5);
+    box-shadow: 0 0 8px 10px rgba(16, 79, 71, 0.5);
+
+}
+.page-footer{
+    justify-content: space-between;
+    padding: 0% 5%;
+    box-shadow: none;
+    background-color: rgba(16, 79, 71, 0.7);
+}
+
+.body-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    visibility: hidden;
+    opacity: 0;
+    animation: start 2s 2s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+

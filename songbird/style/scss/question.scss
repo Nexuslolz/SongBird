@@ -1,0 +1,209 @@
+@import 'variables.scss';
+
+
+.question{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.question-list,
+.answer-list{
+    list-style: none;
+    padding: 0px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    max-width: 1365px;
+    background-color: $color-window;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px 5px $color-window;
+}
+.question-list{
+    width: 80%;
+    flex-direction: row;
+    margin-bottom: 2%;
+}
+.question-list__item,
+.answer-list__item{
+    padding: 10px 0;
+    text-align: center;
+    transition: 0.15s;
+    font-size: 30px;
+}
+
+.answer-list__item{
+    &:nth-last-child(2){
+        margin-bottom: 3%;
+    }
+    &:hover{
+        background-color: $color-hover;
+        box-shadow: inset 0 0 20px 15px rgba(8, 39, 35, 0.4),
+                          0 0 4px 2px rgba(8, 39, 35, 0.4);
+        text-shadow: 0 0 10px white;
+        cursor: pointer;
+        transition: 0.15s;
+    
+}
+}
+.question-list__item_active{
+    background-color: $color-hover;
+    box-shadow: inset 0 0 20px 15px rgba(8, 39, 35, 0.4),
+                      0 0 4px 2px rgba(8, 39, 35, 0.4);
+    text-shadow: 0 0 10px white;
+    cursor: pointer;
+    transition: 0.15s;
+    
+}
+.question-list__item{
+    @extend %header-font;
+    width: 20%;
+
+}
+.answer-list__item{
+    font-size: 20px;
+}
+.answer-list__item:first-child{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.answer-list__item:last-child{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.question-list__item:first-child{
+    border-top-left-radius: 10px ;
+    border-bottom-left-radius: 10px;
+}
+.question-list__item:last-child{
+    border-top-right-radius: 10px ;
+    border-bottom-right-radius: 10px;
+
+}
+
+.question-score,
+.answer-current__next{
+    font-size: 25px;
+    font-weight: bold;
+    align-self: center;
+    margin-bottom: 3%;
+}
+
+.question-current{
+    height: min-content;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    // flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 5%;
+    padding: 15px;
+    background-color: $color-window;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px 5px $color-window;
+    box-sizing: border-box;
+}
+
+.question-current__img{
+    max-width: 300px;
+    max-height: 200px;
+    width: 300px;
+}
+.question-current__content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20%;
+    height: 100%;
+}
+.question-current__header{
+    @extend %header-font;
+    font-size: 36px;
+    margin-top: 1%;
+}
+
+.question-current__img,
+.answer-info__img{
+   @extend %img;
+}
+.audio,
+.audio-scale__wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    gap: 3%;
+    font-weight: bold;
+}
+.audio-scale{
+    position: relative;
+    width: 100%;
+    content: '';
+    background-color: $color-window;
+    height: 5px;
+    border-radius: 5px;
+}
+.audio-range{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(12, 147, 129);
+    height: 5px;
+    border-radius: 5px;
+    width: 0%;
+}
+.audio-control{
+    border: none;
+    background-color: transparent;
+    width:50px;
+    height: 50px;
+}
+.audio-control-play,
+.audio-control-volume{
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    transition: 0.15s;
+    &:hover{
+        transition: 0.15s;
+        transform: scale(1.1);
+    }
+    &:active{
+        opacity: 0.6;
+    }
+}
+.audio-control-play{
+    background-image: url('../assets/img/player/play.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+}
+.audio-control-play_active{
+    background-image: url('../assets/img/player/pause.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+}
+.audio-control-volume{
+    background-image: url('../assets/img/player/soundOn.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.audio-control-volume_active{
+    background-image: url('../assets/img/player/soundOff.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+

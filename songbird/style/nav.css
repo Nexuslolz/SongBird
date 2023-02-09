@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "Bellota";
+  src: url(../assets/fonts/Bellota_Text/BellotaText-Regular.ttf);
+}
+@font-face {
+  font-family: "Amatic";
+  src: url(../assets/fonts/Amatic_SC/AmaticSC-Bold.ttf);
+}
+.nav-list__link {
+  font-family: "Amatic", sans-serif;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 30%;
+}
+
+.nav-list__item {
+  transition: 0.15s;
+}
+.nav-list__item:hover {
+  transform: scale(1.1) rotate(5deg);
+  transition: 0.15s;
+}
+
+.nav-list__link {
+  color: white;
+  text-decoration: none;
+  font-size: 2.3vw;
+  transition: 0.15s;
+}
+.nav-list__link:hover {
+  text-shadow: 0 0 15px white;
+  transition: 0.15s;
+}

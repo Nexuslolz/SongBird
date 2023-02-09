@@ -1,0 +1,104 @@
+@import 'variables.scss';
+
+
+@keyframes open {
+    0%{
+        left: -20%;
+        opacity: 0;
+    }
+    15% {
+        left: 13%;
+        opacity: 1;
+    }
+    85%{
+        left: 13%;
+        opacity: 1;
+    }
+    100%{
+        left: -20%;
+        opacity: 0;
+    }
+    
+}
+
+.start{
+    animation: open 13s ease-in-out infinite;
+    animation-delay: 4s;
+    max-width: 400px;
+    padding: 1% 3%;
+    background-color: $color-window;
+    border-radius: 1.5%;
+    text-align: center;
+    box-shadow: 0 0 10px 5px $color-window;
+    width: 15vw;
+    opacity: 0;
+    color: white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: -20%;
+    &:hover{
+        animation-play-state: paused;
+        opacity: 1;
+    }
+    z-index: 10;
+    backdrop-filter: blur(5px);
+    min-width: 200px;
+}
+
+.start-text{
+    margin-bottom: 15%;
+    line-height: 30px;
+    font-size: 18px;
+    z-index: 10;
+}
+.start-btn{
+    @extend %header-font;
+    font-size: 36px;
+    color: #222;
+    text-decoration: none;
+    padding: 1px 18px;
+    backdrop-filter: blur(5px);
+    transition: 0.15s;
+    border-radius: 5px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.1);
+        &:hover{
+            box-shadow: 0 0 2px 1px rgba(255, 255, 255);
+            background-color: rgba(255, 255, 255);
+            transition: 0.15s;
+        }
+    z-index: 10;
+}
+.start-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    background-image: url('../assets/img/bg6.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background-color: rgba(255, 255, 255);
+}
+.start__wrapper{
+    margin-bottom: 5%;
+}
+
+.page-main{
+    @extend %desktop-width;
+    background-color: transparent;
+}
+
+.page-main{
+    display: flex;
+    color: #222;
+    flex-direction: column;
+    margin-top: 3%;
+}
+
