@@ -1,2 +1,4 @@
-# nexuslolz-JSFE2022Q3
-Private repository for @nexuslolz
+# Song bird
+
+- 1 из учебных проектов
+- https://nexuslolz.github.io/SongBird/songbird/index.html
