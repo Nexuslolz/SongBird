@@ -107,7 +107,7 @@
     flex-direction: column;
   }
   .question-list,
-.answer-list {
+  .answer-list {
     width: 80%;
     margin-bottom: 5%;
   }
@@ -128,6 +128,7 @@
   }
   .audio {
     font-size: 8px;
+    margin-bottom: 15px;
   }
   .audio-control {
     width: 20px;
@@ -140,7 +141,7 @@
 }
 @media (max-width: 535px) {
   .answer-info,
-.question-current {
+  .question-current {
     flex-direction: column;
   }
 }
