@@ -5,7 +5,7 @@ https://nexuslolz.github.io/SongBird/songbird/index.html
 
 ## Preview
 
-<img src='songbird/assets/img/songBird.gif' width='550'>
+<img src='songbird/assets/img/songBird.gif' width='350'>
 
 ## Описание
 
